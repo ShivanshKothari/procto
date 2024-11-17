@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from 'next/link'
-import { BookOpenIcon, FileTextIcon, LockIcon, UsersIcon, VideoIcon } from 'lucide-react'
+import { BookOpenIcon, FileTextIcon, LockIcon, UsersIcon, VideoIcon, CodeIcon } from 'lucide-react'
 
 export default function Dashboard() {
   const [userName, setUserName] = useState('User')
@@ -34,6 +34,21 @@ export default function Dashboard() {
             <CardFooter>
               <Button asChild>
                 <Link href="/exam">View Exams</Link>
+              </Button>
+            </CardFooter>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>Code Editor</CardTitle>
+              <CodeIcon className="w-8 h-8 text-primary" />
+            </CardHeader>
+            <CardContent>
+              <p>Open VS Code-like editor with terminal.</p>
+            </CardContent>
+            <CardFooter>
+              <Button asChild>
+                <Link href="/editor">Open Editor</Link>
               </Button>
             </CardFooter>
           </Card>

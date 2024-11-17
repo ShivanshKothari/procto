@@ -18,13 +18,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head />
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="dark"
+          enableSystem={false}
           disableTransitionOnChange
+          suppressHydrationWarning
         >
           <nav className="bg-primary text-primary-foreground p-4">
             <div className="container mx-auto flex justify-between items-center">
