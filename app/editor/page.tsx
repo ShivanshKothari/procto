@@ -121,7 +121,6 @@ export default function CodeEditor() {
         background: '#1e1e1e',
         foreground: '#d4d4d4',
         cursor: '#d4d4d4',
-        selection: '#264f78',
         black: '#1e1e1e',
         white: '#d4d4d4',
       },
