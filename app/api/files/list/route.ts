@@ -38,7 +38,7 @@ function readDirectoryRecursive(path: string, depth = 0): any[] {
 }
 
 export async function GET(request: NextRequest) {
-  console.log("Reached get request")
+  // console.log("Reached get request")
   try {
     const searchParams = request.nextUrl.searchParams
     const path = searchParams.get('path')
@@ -52,7 +52,7 @@ export async function GET(request: NextRequest) {
     }
 
     const files = readDirectoryRecursive(path)
-    console.log("The files are",files)
+    // console.log("The files are",files)
     return NextResponse.json(files)
   } catch (error) {
     console.error('Error reading files:', error)

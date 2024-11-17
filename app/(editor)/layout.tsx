@@ -1,4 +1,4 @@
-import './globals.css';
+import '../globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from "@/components/theme-provider"
@@ -27,22 +27,6 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange={true}
         >
-          <nav className="bg-primary text-primary-foreground p-4">
-            <div className="container mx-auto flex justify-between items-center">
-              <Link href="/" className="text-2xl font-bold">Procto</Link>
-              <div className="space-x-4">
-                <Button asChild variant="ghost">
-                  <Link href="/dashboard">Dashboard</Link>
-                </Button>
-                <Button asChild variant="ghost">
-                  <Link href="/exam">Exams</Link>
-                </Button>
-                <Button asChild variant="ghost">
-                  <Link href="/editor">Editor</Link>
-                </Button>
-              </div>
-            </div>
-          </nav>
           {children}
         </ThemeProvider>
       </body>

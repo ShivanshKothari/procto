@@ -24,7 +24,7 @@ export function FileExplorer({ onFileSelect, rootPath }: FileExplorerProps) {
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    console.log("Reached useEffect")
+    // console.log("Reached useEffect")
     fetchFiles()
   }, [rootPath])
 
@@ -33,8 +33,8 @@ export function FileExplorer({ onFileSelect, rootPath }: FileExplorerProps) {
       setError(null)
       setLoading(true)
       const response = await fetch(`/api/files/list?path=${encodeURIComponent(rootPath)}`)
-      console.log("Hello\n\n\n\n\n\n")
-      console.log(response)
+      // console.log("Hello\n\n\n\n\n\n")
+      // console.log(response)
       if (!response.ok) {
         const data = await response.json()
         throw new Error(data.error || 'Failed to fetch files')
