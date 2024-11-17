@@ -14,5 +14,12 @@ export function ThemeProvider({
   children,
   ...props
 }: React.PropsWithChildren<ThemeProps>) {
-  return <NextThemesProvider {...props}>{children}</NextThemesProvider>
+  return (
+    <NextThemesProvider 
+      {...props}
+      disableTransitionOnChange={props.disableTransitionOnChange === true}
+    >
+      {children}
+    </NextThemesProvider>
+  )
 }

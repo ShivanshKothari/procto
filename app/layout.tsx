@@ -25,8 +25,7 @@ export default function RootLayout({
           attribute="class"
           defaultTheme="dark"
           enableSystem={false}
-          disableTransitionOnChange
-          suppressHydrationWarning
+          disableTransitionOnChange={true}
         >
           <nav className="bg-primary text-primary-foreground p-4">
             <div className="container mx-auto flex justify-between items-center">
@@ -39,13 +38,7 @@ export default function RootLayout({
                   <Link href="/exam">Exams</Link>
                 </Button>
                 <Button asChild variant="ghost">
-                  <Link href="/quiz">Quizzes</Link>
-                </Button>
-                <Button asChild variant="ghost">
-                  <Link href="/login">Login</Link>
-                </Button>
-                <Button asChild variant="ghost">
-                  <Link href="/register">Register</Link>
+                  <Link href="/editor">Editor</Link>
                 </Button>
               </div>
             </div>
